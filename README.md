@@ -2,15 +2,15 @@
 
 Supplementary material for the paper [A unit-distance graph in the plane with independence ratio below 1/4](https://arxiv.org/abs/2606.28157) by Ákos Dúcz and Dániel Varga.
 
-We present a unit-distance graph $G$ in the plane with geometric fractional chromatic number $\operatorname{GFCN}(G) > 4$. This implies the existence of a unit-distance graph in the plane with independence ratio below $1/4$, which answers a question of Erdős.
+We present a unit-distance graph $G$ in the plane with geometric fractional chromatic number $\mathrm{GFCN}(G) > 4$. This implies the existence of a unit-distance graph in the plane with independence ratio below $1/4$, which answers a question of Erdős.
 
-Our graph $G_{29}$ is presented as a list of 29 complex numbers, stored symbolically as SymPy objects. We also provide a Python script to symbolically verify that the graph is indeed a unit-distance graph, and to verify our dual witness, proving a lower bound on $\operatorname{GFCN}(G_{29})$.
+Our graph $G_{29}$ is presented as a list of 29 complex numbers, stored symbolically as SymPy objects. We also provide a Python script to symbolically verify that the graph is indeed a unit-distance graph, and to verify our dual witness, proving a lower bound on $\mathrm{GFCN}(G_{29})$.
 
 The following list of files is included in the [supplementary material](https://users.renyi.hu/~akos/ep1070/data/snail.zip):
 
 - `verts_sym.npy` - a NumPy array containing 29 SymPy objects, our vertices.
 - `congruences.txt` - a list of congruences between independent subsets of $G_{29}$.
-- `rational_witness.txt` - a dual GFCN LP solution, as rational numbers, certifying $\operatorname{GFCN}(G_{29}) > 4$.
+- `rational_witness.txt` - a dual GFCN LP solution, as rational numbers, certifying $\mathrm{GFCN}(G_{29}) > 4$.
 - `verify_data.py` - a verification script for the supplementary material.
 - `utils.py` - utilities for `verify_data.py`.
 
