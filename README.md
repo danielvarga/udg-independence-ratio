@@ -6,13 +6,19 @@ We present a unit-distance graph $G$ in the plane with geometric fractional chro
 
 Our graph $G_{29}$ is presented as a list of 29 complex numbers, stored symbolically as SymPy objects. We also provide a Python script to symbolically verify that the graph is indeed a unit-distance graph, and to verify our dual witness, proving a lower bound on $\mathrm{GFCN}(G_{29})$.
 
-The following list of files is included in the [supplementary material](https://users.renyi.hu/~akos/ep1070/data/snail.zip):
+The [`snail_reproduction`](snail_reproduction/) directory contains the supplementary material for reproducing the certificate:
 
 - `verts_sym.npy` - a NumPy array containing 29 SymPy objects, our vertices.
 - `congruences.txt` - a list of congruences between independent subsets of $G_{29}$.
-- `rational_witness.txt` - a dual GFCN LP solution, as rational numbers, certifying $\mathrm{GFCN}(G_{29}) > 4$.
+- `rational_dual.txt` - a dual GFCN LP solution, as rational numbers, certifying $\mathrm{GFCN}(G_{29}) > 4$.
 - `verify_data.py` - a verification script for the supplementary material.
 - `utils.py` - utilities for `verify_data.py`.
+
+Run the verification with:
+
+```sh
+python snail_reproduction/verify_data.py
+```
 
 The verification steps in detail:
 
@@ -24,9 +30,9 @@ The verification steps in detail:
 
 The verification process takes roughly 20-30 minutes, and certain parts can be disabled if needed, provided that the necessary precomputed data is supplied beforehand.
 
-![The graph G_29](https://users.renyi.hu/~akos/ep1070/data/snail_reproduction/figures/snail.svg)
+![The graph G_29](snail_reproduction/figures/snail.svg)
 
-![Congruence structure for G_29](https://users.renyi.hu/~akos/ep1070/data/snail_reproduction/figures/snail_congs.svg)
+![Congruence structure for G_29](snail_reproduction/figures/snail_congs.svg)
 
 ## Formalization
 

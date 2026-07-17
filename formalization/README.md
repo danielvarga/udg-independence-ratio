@@ -1,6 +1,6 @@
 # unit-distance-graph-independence-ratio
 
-Lean 4 formalization of Theorem 1 of Dúcz–Varga (2026) — *a finite unit-distance graph in the plane with independence ratio below 1/4* — answering a question of Erdős ([problem #1070](https://www.erdosproblems.com/1070)) in the negative.
+[Beatrix Benkő's](https://github.com/bbeatrix) Lean 4 formalization of Dúcz–Varga (2026) — A finite unit-distance graph in the plane with independence ratio below 1/4.
 
 ## Contents
 

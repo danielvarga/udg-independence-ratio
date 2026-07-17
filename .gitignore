@@ -1,0 +1,6 @@
+.DS_Store
+__pycache__/
+*.pyc
+snail.zip
+snail_reproduction/iec.npz
+.readme-preview.html
