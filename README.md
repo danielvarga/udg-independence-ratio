@@ -1,8 +1,8 @@
-# A Unit-Distance Graph in the Plane with Independence Ratio Below 1/4
+# A unit-distance graph in the plane with independence ratio below 1/4
 
 Supplementary material for the paper [A unit-distance graph in the plane with independence ratio below 1/4](https://arxiv.org/abs/2606.28157) by Ákos Dúcz and Dániel Varga.
 
-We present a unit-distance graph $G$ in the plane with geometric fractional chromatic number $\mathrm{GFCN}(G) > 4$. This implies the existence of a unit-distance graph in the plane with independence ratio below $1/4$, settling the second half of [Erdős Problem #1070](https://www.erdosproblems.com/1070): whether every $n$-point set in the plane must contain at least $n/4$ points with no two at distance $1$.
+We present a unit-distance graph $G_{29}$ in the plane with geometric fractional chromatic number $\mathrm{GFCN}(G_{29}) > 4$. This implies the existence of a unit-distance graph in the plane with independence ratio below $1/4$, settling the second half of [Erdős Problem #1070](https://www.erdosproblems.com/1070): whether every $n$-point set in the plane must contain at least $n/4$ points with no two at distance $1$.
 
 Our graph $G_{29}$ is presented as a list of 29 complex numbers, stored symbolically as SymPy objects. We also provide a Python script to symbolically verify that the graph is indeed a unit-distance graph, and to verify our dual witness, proving a lower bound on $\mathrm{GFCN}(G_{29})$.
 
@@ -28,7 +28,7 @@ The verification steps in detail:
 4. We build the IEC matrix from the congruences, which describe our geometric congruence constraints.
 5. Finally we load the rational dual solution and verify it using simple integer arithmetic.
 
-The verification process takes roughly 20-30 minutes, and certain parts can be disabled if needed, provided that the necessary precomputed data is supplied beforehand.
+The verification process takes roughly 20 minutes.
 
 ![The graph G_29](snail_reproduction/figures/snail.svg)
 
@@ -36,7 +36,7 @@ The verification process takes roughly 20-30 minutes, and certain parts can be d
 
 ## Formalization
 
-The [`formalization`](formalization/) directory contains the Lean formalization from [bbeatrix/unit-distance-graph-independence-ratio](https://github.com/bbeatrix/unit-distance-graph-independence-ratio), copied intact into this repository.
+The [`formalization`](formalization/) directory contains the Lean formalization, forked from [bbeatrix/unit-distance-graph-independence-ratio](https://github.com/bbeatrix/unit-distance-graph-independence-ratio).
 
 Many thanks to Beatrix Benkő for her work on the autoformalization.
 
