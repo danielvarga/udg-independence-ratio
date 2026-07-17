@@ -11,13 +11,13 @@ The [`snail_reproduction`](snail_reproduction/) directory contains the supplemen
 - `verts_sym.npy` - a NumPy array containing 29 SymPy objects, our vertices.
 - `congruences.txt` - a list of congruences between independent subsets of $G_{29}$.
 - `rational_dual.txt` - a dual GFCN LP solution, as rational numbers, certifying $\mathrm{GFCN}(G_{29}) > 4$.
-- `verify_data.py` - a verification script for the supplementary material.
-- `utils.py` - utilities for `verify_data.py`.
+- `verify.py` - a verification script for the supplementary material.
+- `utils.py` - utilities for `verify.py`.
 
 Run the verification with:
 
 ```sh
-python snail_reproduction/verify_data.py
+python snail_reproduction/verify.py
 ```
 
 The verification steps in detail:

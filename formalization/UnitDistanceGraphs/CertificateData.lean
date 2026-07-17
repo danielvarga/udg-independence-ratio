@@ -3,7 +3,7 @@ The [DV26] rational dual LP certificate: the 16859 congruences `(L,R)` as vertex
 strings (`congLStr`, `congRStr`), their positional alignment lists (`amatStr`, `bmatStr`), the
 integer dual witness `y` (`yStr`, rationals scaled by the common denominator `certDen`), and the
 objective `certNum`/`certDen` ≈ 4.0007 > 4 (`cert_value_gt_four`), from the supplementary data
-at renyi.hu/~akos/ep1070 (`verify_data.py`). The strings are untrusted hint material: everything
+at renyi.hu/~akos/ep1070 (`verify.py` in this repository). The strings are untrusted hint material: everything
 asserted about them is re-verified where they are parsed and consumed, in
 `CertificateVerification.lean`.
 -/
