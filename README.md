@@ -2,7 +2,7 @@
 
 Supplementary material for the paper [A unit-distance graph in the plane with independence ratio below 1/4](https://arxiv.org/abs/2606.28157) by Ákos Dúcz and Dániel Varga.
 
-We present a unit-distance graph $G$ in the plane with geometric fractional chromatic number $\mathrm{GFCN}(G) > 4$. This implies the existence of a unit-distance graph in the plane with independence ratio below $1/4$, which answers a question of Erdős.
+We present a unit-distance graph $G$ in the plane with geometric fractional chromatic number $\mathrm{GFCN}(G) > 4$. This implies the existence of a unit-distance graph in the plane with independence ratio below $1/4$, settling the second half of [Erdős Problem #1070](https://www.erdosproblems.com/1070): whether every $n$-point set in the plane must contain at least $n/4$ points with no two at distance $1$.
 
 Our graph $G_{29}$ is presented as a list of 29 complex numbers, stored symbolically as SymPy objects. We also provide a Python script to symbolically verify that the graph is indeed a unit-distance graph, and to verify our dual witness, proving a lower bound on $\mathrm{GFCN}(G_{29})$.
 
