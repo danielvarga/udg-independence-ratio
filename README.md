@@ -4,6 +4,13 @@ Supplementary material for the paper [A unit-distance graph in the plane with in
 
 We present a unit-distance graph $G_{29}$ in the plane with geometric fractional chromatic number $\chi_{gf}(G_{29}) > 4$. This implies the existence of a unit-distance graph in the plane with independence ratio below $1/4$, settling the second half of [Erdős Problem #1070](https://www.erdosproblems.com/1070): whether every $n$-point set in the plane must contain at least $n/4$ points with no two at distance $1$.
 
+This repository has two main parts. First, it contains a Python verification of the defining
+properties of our graph $G_{29}$ and of the rational dual certificate proving
+$\chi_{gf}(G_{29}) > 4$. Second, it contains a complete Lean 4 formalization of the theorem and
+the corollaries of the paper.
+
+## Python verification
+
 Our graph $G_{29}$ is presented as a list of 29 complex numbers, stored symbolically as SymPy objects. We also provide a Python script to symbolically verify that the graph is indeed a unit-distance graph, and to verify our dual witness, proving a lower bound on $\chi_{gf}(G_{29})$.
 
 The [`snail_reproduction`](snail_reproduction/) directory contains all the material sufficient to verify the claim $\chi_{gf}(G_{29}) > 4$:
@@ -34,7 +41,7 @@ The verification process takes roughly 20 minutes.
 
 ![Congruence structure for G_29](snail_reproduction/figures/snail_congs.svg)
 
-## Formalization
+## Lean formalization
 
 The [`formalization`](formalization/) directory contains the Lean formalization, forked from [bbeatrix/unit-distance-graph-independence-ratio](https://github.com/bbeatrix/unit-distance-graph-independence-ratio).
 
