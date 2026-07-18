@@ -8,6 +8,7 @@
 - [Building and verifying](#building-and-verifying)
 - [Status and trust base](#status-and-trust-base)
 - [The proof](#the-proof)
+- [Corollaries](#corollaries)
 - [Repository layout](#repository-layout)
 - [Attribution](#attribution)
 
@@ -184,6 +185,25 @@ Theorem 1 of [DV26] combines three components, formalized in the order below. (O
 
 </details>
 
+## Corollaries
+
+[`Corollaries.lean`](UnitDistanceGraphs/Corollaries.lean) derives **Corollaries 1-3 of [DV26]**
+from the theorem, with the same axiom footprint:
+
+1. **χ_f(ℝ²) > 4** (`four_lt_planeFractionalChromaticNumber`). The fractional chromatic number
+   of the full, infinite unit-distance graph of the plane exceeds 4: fractional colorings of
+   the plane are `ℝ≥0∞`-weightings of independent point sets, and any such coloring restricts
+   to a fractional coloring of the finite graph produced by Component 1. A finitary form
+   `four_lt_finitaryPlaneFractionalChromaticNumber` (`sup_G χ_f(G) > 4`) is also provided.
+2. **χ(ℝ²) ≥ 5** (`five_le_planeGraph_chromaticNumber`, with `planeGraph_not_colorable_four`).
+   The chromatic number of the plane is at least 5; de Grey's 2018 bound is recovered here
+   because a proper 4-coloring of the plane would force χ_f ≤ 4 on every finite unit-distance
+   graph.
+3. **m₁(ℝ²) < 1/4** (`maxAvoidingDensity_lt_quarter`). Every measurable planar set avoiding
+   unit distances has upper density below 1/4, uniformly. Proof: each translate of Theorem 1's
+   graph `H` meets such a set in an independent set, so averaging over translates in a large
+   ball bounds the density by `α(H)/|V(H)| < 1/4`.
+
 ## Repository layout
 
 | File (in `UnitDistanceGraphs/`) | Role |
@@ -203,6 +223,7 @@ Theorem 1 of [DV26] combines three components, formalized in the order below. (O
 | [`SecondBlowUp.lean`](UnitDistanceGraphs/SecondBlowUp.lean) | Component 3 in full: the lattice cube (layers L1–L5a) and the assembly `exists_low_independence_ratio`. |
 | **Top level** | |
 | [`Main.lean`](UnitDistanceGraphs/Main.lean) | `exists_independenceRatio_lt_quarter`: Theorem 1, assembled from the three components. |
+| [`Corollaries.lean`](UnitDistanceGraphs/Corollaries.lean) | Corollaries 1-3 of [DV26]: `χ_f(ℝ²) > 4`, `χ(ℝ²) ≥ 5`, `m₁(ℝ²) < 1/4`. |
 
 ## Attribution
 

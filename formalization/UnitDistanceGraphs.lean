@@ -26,3 +26,6 @@ import UnitDistanceGraphs.SecondBlowUp
 
 -- Theorem 1 of [DV26]
 import UnitDistanceGraphs.Main
+
+-- Corollaries 1-3 of [DV26]
+import UnitDistanceGraphs.Corollaries
