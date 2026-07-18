@@ -1,4 +1,4 @@
-\documentclass{amsart}
+\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -28,23 +28,22 @@
 \title[A unit-distance graph in the plane with independence ratio below $1/4$]
 {A unit-distance graph in the plane with independence ratio below $1/4$}
 
-\thanks{A preprint version of this article is available as arXiv:2606.28157.}
-\author[Á. Dúcz]{Ákos Dúcz}
-\author[D. Varga]{Dániel Varga}
+\author[1]{Ákos Dúcz}
+\author[1]{Dániel Varga}
+\affil[1]{\orgname{HUN-REN Alfréd Rényi Institute of Mathematics}, \orgaddress{\city{Budapest}, \country{Hungary}}}
 \date{June 2026}
+
+\abstract{
+We prove that there exists a finite unit-distance graph in the plane with independence ratio strictly smaller than 1/4, answering a question of Erdős. Our proof closely follows the framework of Matolcsi, Ruzsa, Varga, and Zsámboki~\cite{MRVZ}, based on the geometric fractional chromatic number, but adds a carefully chosen two-vertex augmentation that pushes their 27-vertex construction from geometric fractional chromatic number 4 to a value strictly larger than 4. This disproves their Conjecture 1, and implies that the fractional chromatic number of the plane is strictly larger than 4. The proof can be made fully constructive, but the resulting finite graph has an enormous number of vertices.
+}
 
 \begin{document}
 
-\begin{abstract}
-We prove that there exists a finite unit-distance graph in the plane with independence ratio strictly smaller than $1/4$, answering a question of Erdős. Our proof closely follows the framework of Matolcsi, Ruzsa, Varga, and Zsámboki~\cite{MRVZ}, based on the geometric fractional chromatic number, but adds a carefully chosen two-vertex augmentation that pushes their $27$-vertex construction from geometric fractional chromatic number $4$ to a value strictly larger than $4$. This disproves their Conjecture 1, and implies that the fractional chromatic number of the plane is strictly larger than $4$. The proof can be made fully constructive, but the resulting finite graph has an enormous number of vertices.
-
-\end{abstract}
-
-
-% To keep all corollaries on the first page.
-\vspace*{-1.5cm}
 
 \maketitle
+
+\noindent\textit{A preprint version of this article is available as arXiv:2606.28157.}
+\par\medskip
 
 
 \section{Introduction}
@@ -344,7 +343,7 @@ The affine hull of $F$ has dimension $11$. It remains to enumerate the extremal 
 %{4: 2, 12: 2, 24: 2, 48: 2, 52: 1, 60: 1, 64: 1, 72: 3, 76: 3, 84: 3, 88: 3}
 It turns out that the polytope $F$ of optimal geometric fractional colorings of $\G$ has exactly $23$ extremal points; we denote this set by $E$. Two elements of $E$ are the integer colorings characterized in \cite{DuczMoserLattice}, and hence are $1$-fold colorings. For each of the fold numbers $3$, $6$, and $12$, there are two extremal colorings, while the largest fold number, $22$, is attained by three extremal colorings. Four representative examples are shown in Table~\ref{table:extremals}; the full list of $23$ extremal colorings is included in the supplementary material \cite{supplementary}.
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{|c|c|}
@@ -465,7 +464,7 @@ arXiv:2606.12325, 2026.
 \bibitem{supplementary}
 \'{A}.~D\'ucz and D.~Varga,
 \emph{Supplementary material for ``A unit-distance graph in the plane with independence ratio below $1/4$''},
-available at \url{https://users.renyi.hu/~akos/ep1070/}.
+available at \url{https://github.com/danielvarga/udg-independence-ratio}, with Zenodo snapshot at TODO.
 
 \bibitem{Er85}
 P.~Erd{\H{o}}s,
