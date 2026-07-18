@@ -6,11 +6,11 @@ We present a unit-distance graph $G_{29}$ in the plane with geometric fractional
 
 Our graph $G_{29}$ is presented as a list of 29 complex numbers, stored symbolically as SymPy objects. We also provide a Python script to symbolically verify that the graph is indeed a unit-distance graph, and to verify our dual witness, proving a lower bound on $\mathrm{GFCN}(G_{29})$.
 
-The [`snail_reproduction`](snail_reproduction/) directory contains the supplementary material for reproducing the certificate:
+The [`snail_reproduction`](snail_reproduction/) directory contains all the material sufficient to verify the claim $\mathrm{GFCN}(G_{29}) > 4$:
 
-- `verts_sym.npy` - a NumPy array containing 29 SymPy objects, our vertices.
+- `verts_sym.npy` - a NumPy array containing 29 SymPy objects, our vertices, in the order $\{p,q,v_1,\dots,v_{27}\}$.
 - `congruences.txt` - a list of congruences between independent subsets of $G_{29}$.
-- `rational_dual.txt` - a dual GFCN LP solution, as rational numbers, certifying $\mathrm{GFCN}(G_{29}) > 4$.
+- `rational_dual.txt` - a dual GFCN LP solution, as rational numbers, certifying $\mathrm{GFCN}(G_{29}) > 4.0007$.
 - `verify.py` - a verification script for the supplementary material.
 - `utils.py` - utilities for `verify.py`.
 
@@ -25,8 +25,8 @@ The verification steps in detail:
 1. We first load the symbolic vertices, and build an adjacency matrix $A$ using SymPy.
 2. We calculate the independent sets of $G_{29}$, also called atoms, from $A$.
 3. After loading the congruences, we again use SymPy to verify that each one is indeed an isometry.
-4. We build the IEC matrix from the congruences, which describe our geometric congruence constraints.
-5. Finally we load the rational dual solution and verify it using simple integer arithmetic.
+4. We build the $C$ matrix from the congruences, which describe our geometric congruence constraints.
+5. Finally we load the rational dual solution and verify it using integer arithmetic.
 
 The verification process takes roughly 20 minutes.
 
@@ -40,6 +40,10 @@ The [`formalization`](formalization/) directory contains the Lean formalization,
 
 Many thanks to Beatrix Benkő for her work on the autoformalization.
 
-## Planned Addition
+## Planned additions
 
-A PDF will be added later presenting the case for a specific $10^{10^{10^{10^{13}}}}$ upper bound on the size of a unit-distance graph with the required independence ratio below $1/4$.
+- TODO The rational witness and the exact GFCN value?
+- TODO A PDF will be added later proving an explicit $10^{10^{10^{10^{13}}}}$ upper bound on the size of a unit-distance graph with the required independence ratio below $1/4$.
+- TODO Even later, hopefully, an autoformalization of this explicit variant of Theorem 1.
+- TODO Okay, but how to update the paper if we add some of these before submission?
+- TODO Do not forget to make this repo public, create Zenodo snapshot, and add it to paper bibloigraphy.
